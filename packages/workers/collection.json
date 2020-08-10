@@ -1,0 +1,12 @@
+{
+  "$schema": "../../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "name": "workers",
+  "version": "0.0.1",
+  "schematics": {
+    "workers": {
+      "factory": "./src/schematics/workers/schematic",
+      "schema": "./src/schematics/workers/schema.json",
+      "description": "workers schematic"
+    }
+  }
+}
