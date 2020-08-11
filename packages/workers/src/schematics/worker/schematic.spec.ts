@@ -4,6 +4,7 @@ import { createEmptyWorkspace } from '@nrwl/workspace/testing';
 import { join } from 'path';
 
 import { WorkersSchematicSchema } from './schema';
+jest.mock('axios')
 
 describe('workers schematic', () => {
   let appTree: Tree;
@@ -18,9 +19,9 @@ describe('workers schematic', () => {
     appTree = createEmptyWorkspace(Tree.empty());
   });
 
+
   it('should run successfully', async () => {
-    await expect(
-      testRunner.runSchematicAsync('workers', options, appTree).toPromise()
-    ).resolves.not.toThrowError();
-  });
+      const tree = await testRunner.runSchematicAsync('worker', options, appTree).toPromise()
+      console.log('tree', tree);
+  }, 20000);
 });

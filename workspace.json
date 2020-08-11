@@ -71,6 +71,96 @@
           }
         }
       }
+    },
+    "test-worker": {
+      "projectType": "application",
+      "root": "apps/test-worker",
+      "sourceRoot": "apps/test-worker/src",
+      "architect": {
+        "build": {
+          "builder": "@supercuts/workers:build"
+        }
+      }
+    },
+    "test-worker2": {
+      "projectType": "application",
+      "root": "apps/test-worker2",
+      "sourceRoot": "apps/test-worker2/src",
+      "architect": {
+        "build": {
+          "builder": "@supercuts/workers:build"
+        }
+      }
+    },
+    "test-worker3": {
+      "projectType": "application",
+      "root": "apps/test-worker3",
+      "sourceRoot": "apps/test-worker3/src",
+      "architect": {
+        "build": {
+          "builder": "@supercuts/workers:build"
+        }
+      }
+    },
+    "test-worker4": {
+      "projectType": "application",
+      "root": "apps/test-worker4",
+      "sourceRoot": "apps/test-worker4/src",
+      "architect": {
+        "build": {
+          "builder": "@supercuts/workers:build"
+        }
+      }
+    },
+    "test-worker6": {
+      "projectType": "application",
+      "root": "apps/test-worker6",
+      "sourceRoot": "apps/test-worker6/src",
+      "architect": {
+        "build": {
+          "builder": "@supercuts/workers:build"
+        }
+      }
+    },
+    "tsetalskjtha": {
+      "projectType": "application",
+      "root": "apps/tsetalskjtha",
+      "sourceRoot": "apps/tsetalskjtha/src",
+      "architect": {
+        "build": {
+          "builder": "@supercuts/workers:build"
+        }
+      }
+    },
+    "x": {
+      "projectType": "application",
+      "root": "apps/x",
+      "sourceRoot": "apps/x/src",
+      "architect": {
+        "build": {
+          "builder": "@supercuts/workers:build"
+        }
+      }
+    },
+    "y": {
+      "projectType": "application",
+      "root": "apps/y",
+      "sourceRoot": "apps/y/src",
+      "architect": {
+        "build": {
+          "builder": "@supercuts/workers:build"
+        }
+      }
+    },
+    "z": {
+      "projectType": "application",
+      "root": "apps/z",
+      "sourceRoot": "apps/z/src",
+      "architect": {
+        "build": {
+          "builder": "@supercuts/workers:build"
+        }
+      }
     }
   },
   "cli": {

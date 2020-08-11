@@ -9,7 +9,7 @@ describe('workers e2e', () => {
   it('should create workers', async (done) => {
     const plugin = uniq('workers');
     ensureNxProject('@supercuts/workers', 'dist/packages/workers');
-    await runNxCommandAsync(`generate @supercuts/workers:workers ${plugin}`);
+    await runNxCommandAsync(`generate @supercuts/workers:worker ${plugin}`);
 
     const result = await runNxCommandAsync(`build ${plugin}`);
     expect(result.stdout).toContain('Builder ran');
@@ -22,7 +22,7 @@ describe('workers e2e', () => {
       const plugin = uniq('workers');
       ensureNxProject('@supercuts/workers', 'dist/packages/workers');
       await runNxCommandAsync(
-        `generate @supercuts/workers:workers ${plugin} --directory subdir`
+        `generate @supercuts/workers:worker ${plugin} --directory subdir`
       );
       expect(() =>
         checkFilesExist(`libs/subdir/${plugin}/src/index.ts`)
@@ -36,7 +36,7 @@ describe('workers e2e', () => {
       const plugin = uniq('workers');
       ensureNxProject('@supercuts/workers', 'dist/packages/workers');
       await runNxCommandAsync(
-        `generate @supercuts/workers:workers ${plugin} --tags e2etag,e2ePackage`
+        `generate @supercuts/workers:worker ${plugin} --tags e2etag,e2ePackage`
       );
       const nxJson = readJson('nx.json');
       expect(nxJson.projects[plugin].tags).toEqual(['e2etag', 'e2ePackage']);

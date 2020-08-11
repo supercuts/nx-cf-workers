@@ -2,6 +2,9 @@
   "extends": "../../tsconfig.base.json",
   "files": [],
   "include": [],
+  "exclude": [
+    "./src/schematics/worker/files/"
+  ],
   "references": [
     {
       "path": "./tsconfig.lib.json"

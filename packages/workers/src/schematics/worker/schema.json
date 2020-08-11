@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "id": "worker",
+  "title": "Create a TypeScript worker for Nx",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use?"
+    },
+    "tags": {
+      "type": "string",
+      "description": "Add tags to the project (used for linting)",
+      "alias": "t"
+    },
+    "directory": {
+      "type": "string",
+      "description": "A directory where the project is placed",
+      "alias": "d"
+    },
+    "template": {
+      "description": "The template to be used.",
+      "type": "string",
+      "default": "https://github.com/EverlastingBugstopper/worker-typescript-template/",
+      "pattern": "(^https://github\\.com/[a-zA-Z0-9\\-]+/[a-zA-Z0-9\\-.]+?/$)|(undefined)",
+      "x-prompt": {
+        "message": "Which template would you like to use",
+        "type": "list",
+        "items": [
+          {
+            "value": "https://github.com/EverlastingBugstopper/worker-typescript-template/",
+            "label": "Hello World Typescript"
+          },
+          {
+            "value": "https://github.com/cloudflare/worker-template-router/",
+            "label": "Router (JavaScript)"
+          },
+          {
+            "value": "https://github.com/cloudflare/cobol-worker-template/",
+            "label": "COBOL"
+          },
+          {
+            "value": "https://github.com/cloudflare/rustwasm-worker-template/",
+            "label": "Hello World Rust"
+          },
+          {
+            "value": "https://github.com/cloudflare/reason-worker-hello-world/",
+            "label": "Hello World Reason"
+          },
+          {
+            "value": "https://github.com/cloudflare/python-worker-hello-world/",
+            "label": "Hello World Python"
+          },
+          {
+            "value": "https://github.com/cloudflare/dart-worker-hello-world/",
+            "label": "Hello World Dart"
+          },
+          {
+            "value": "https://github.com/cloudflare/scala-worker-hello-world/",
+            "label": "Hello World Scala"
+          },
+          {
+            "value": "https://github.com/cloudflare/kotlin-worker-hello-world/",
+            "label": "Hello World Kotlin"
+          },
+          {
+            "value": "https://github.com/cloudflare/worker-template/",
+            "label": "Hello World"
+          },
+          {
+            "value": "undefined",
+            "label": "Other"
+          }
+        ]
+      }
+    },
+    "link": {
+      "description": "The template to be used.",
+      "type": "string",
+      "default": "https://github.com/EverlastingBugstopper/worker-typescript-template/",
+      "condition": "model.template !== 'undefined'",
+      "pattern": "^https://github\\.com/[a-zA-Z0-9\\-]+/[a-zA-Z0-9\\-.]+?/"
+    }
+  },
+  "required": ["name"]
+}

@@ -3,10 +3,10 @@
   "name": "workers",
   "version": "0.0.1",
   "schematics": {
-    "workers": {
-      "factory": "./src/schematics/workers/schematic",
-      "schema": "./src/schematics/workers/schema.json",
-      "description": "workers schematic"
+    "worker": {
+      "factory": "./src/schematics/worker/schematic",
+      "schema": "./src/schematics/worker/schema.json",
+      "description": "cloudflare worker schematic"
     }
   }
 }

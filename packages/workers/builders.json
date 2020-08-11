@@ -5,6 +5,12 @@
       "implementation": "./src/builders/build/builder",
       "schema": "./src/builders/build/schema.json",
       "description": "build builder"
+    },
+    "deploy": {
+
+    },
+    "dev": {
+
     }
   }
 }
